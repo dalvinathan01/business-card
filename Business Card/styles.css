@@ -1,0 +1,243 @@
+body {
+            margin: 20px;
+            /* Challenge: Web safe font */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            /* Stretch Goal: Add border radius */
+            border-radius: 50%;
+            border: 3px solid #ff9e00;
+            /* Stretch Goal: Shadows */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            /* Stretch Goal: Hover effects */
+            transition: all 0.3s ease;
+        }
+
+        /* Stretch Goal: Hover effects on avatar */
+        .avatar:hover {
+            transform: scale(1.1) rotate(5deg);
+            border-color: #ffc947;
+            box-shadow: 0 8px 25px rgba(255, 110, 0, 0.4);
+        }
+
+        .card {
+            width: 400px;
+            /* Stretch Goal: Add border radius */
+            border-radius: 20px;
+            /* Stretch Goal: Change the border(s) */
+            border: 3px solid #ff7900;
+            border-bottom: 6px solid #ff9e00;
+            /* Stretch Goal: Add shadows */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            /* Stretch Goal: Hover effects */
+            transition: all 0.4s ease;
+            /* Stretch Goal: Shuffle the layout */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* Challenge: Color palette from Coolors.co */
+            background: linear-gradient(135deg, #3c096c 0%, #240046 100%);
+            color: #ff6d00;
+        }
+
+        /* Stretch Goal: Hover effects on card */
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: #ffc947;
+        }
+
+        /* Decorative background element */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 110, 0, 0.1) 0%, transparent 70%);
+            /* Stretch Goal: Animations */
+            animation: rotate 20s linear infinite;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 158, 0, 0.2);
+            border-radius: 50%;
+            /* Stretch Goal: Animations */
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* Content wrapper to keep text above decorative elements */
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h3 {
+            font-size: 1.8em;
+            margin: 15px 0 10px 0;
+            color: #ff6d00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            /* Stretch Goal: Shadows */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            /* Stretch Goal: Animations */
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ff9e00;
+            margin: 10px 0;
+            font-weight: 500;
+            /* Stretch Goal: Hover effects */
+            transition: all 0.3s ease;
+        }
+
+        p:hover {
+            color: #ffc947;
+            transform: scale(1.05);
+        }
+
+        h4 {
+            font-size: 1em;
+            color: #ffc947;
+            margin: 15px 0;
+            font-weight: normal;
+            opacity: 0.9;
+            /* Stretch Goal: Hover effects */
+            transition: all 0.3s ease;
+        }
+
+        h4:hover {
+            opacity: 1;
+            letter-spacing: 1px;
+        }
+
+        /* Stretch Goal: Change the border(s) - using border-blue class */
+        .border-blue {
+            border: 2px dotted #4cc9f0;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            background: rgba(76, 201, 240, 0.05);
+            backdrop-filter: blur(5px);
+            /* Stretch Goal: Hover effects */
+            transition: all 0.3s ease;
+        }
+
+        .border-blue:hover {
+            background: rgba(76, 201, 240, 0.1);
+            border-color: #7209b7;
+        }
+
+        /* Social links styling */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #ff6d00, #ff9e00);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9em;
+            /* Stretch Goal: Shadows */
+            box-shadow: 0 3px 10px rgba(255, 110, 0, 0.3);
+            /* Stretch Goal: Hover effects */
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 110, 0, 0.5);
+            background: linear-gradient(135deg, #ff9e00, #ffc947);
+        }
+
+        /* Stretch Goal: Animations */
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                            0 0 10px rgba(255, 110, 0, 0.5);
+            }
+            to {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+                            0 0 20px rgba(255, 110, 0, 0.8),
+                            0 0 30px rgba(255, 158, 0, 0.6);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.2;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.4;
+            }
+        }
+
+        /* Floating animation for the card */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Apply floating animation to card on load */
+        .card {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Stop float animation on hover for better interaction */
+        .card:hover {
+            animation-play-state: paused;
+        }
+
+        /*
+        Stretch goals completed:
+        ✅ Change the border(s) - Multiple border styles, dotted blue border option
+        ✅ Add border radius - Rounded corners on card, circular avatar
+        ✅ Shuffle the layout - Vertical centered layout with decorative elements
+        ✅ Shadows 😊 - Box shadows, text shadows on multiple elements
+        ✅ Hover effects 😊😊 - Interactive hover states on all elements
+        ✅ Animations 😊😊😊 - Glow, rotate, pulse, and float animations
+        */
